@@ -26,16 +26,16 @@ categories = ["finance", "data-structures"]
 
 [workspace.dependencies]
 # Internal crates
-ironfix-core = { path = "ironfix-core" }
-ironfix-dictionary = { path = "ironfix-dictionary" }
-ironfix-tagvalue = { path = "ironfix-tagvalue" }
-ironfix-session = { path = "ironfix-session" }
-ironfix-store = { path = "ironfix-store" }
-ironfix-transport = { path = "ironfix-transport" }
-ironfix-fast = { path = "ironfix-fast" }
-ironfix-codegen = { path = "ironfix-codegen" }
-ironfix-derive = { path = "ironfix-derive" }
-ironfix-engine = { path = "ironfix-engine" }
+ironfix-core = { path = "ironfix-core", version = "0.1.0" }
+ironfix-dictionary = { path = "ironfix-dictionary", version = "0.1.0" }
+ironfix-tagvalue = { path = "ironfix-tagvalue", version = "0.1.0" }
+ironfix-session = { path = "ironfix-session", version = "0.1.0" }
+ironfix-store = { path = "ironfix-store", version = "0.1.0" }
+ironfix-transport = { path = "ironfix-transport", version = "0.1.0" }
+ironfix-fast = { path = "ironfix-fast", version = "0.1.0" }
+ironfix-codegen = { path = "ironfix-codegen", version = "0.1.0" }
+ironfix-derive = { path = "ironfix-derive", version = "0.1.0" }
+ironfix-engine = { path = "ironfix-engine", version = "0.1.0" }
 
 # External dependencies
 thiserror = "2.0"

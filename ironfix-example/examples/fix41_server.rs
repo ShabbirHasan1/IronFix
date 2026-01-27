@@ -1,7 +1,7 @@
 //! FIX 4.1 Server Example
 use bytes::BytesMut;
-use ironfix::core::MsgType;
-use ironfix::tagvalue::{Decoder, Encoder};
+use ironfix_core::MsgType;
+use ironfix_tagvalue::{Decoder, Encoder};
 use std::collections::HashMap;
 use std::sync::Arc;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
@@ -97,7 +97,7 @@ fn build_msg(c: &ExampleConfig, mt: &str, id: Option<&str>) -> Vec<u8> {
     e.finish().to_vec()
 }
 
-fn build_exec(c: &ExampleConfig, raw: &ironfix::tagvalue::RawMessage<'_>) -> Vec<u8> {
+fn build_exec(c: &ExampleConfig, raw: &ironfix_tagvalue::RawMessage<'_>) -> Vec<u8> {
     let clid = raw.get_field_str(11).unwrap_or("0");
     let mut e = Encoder::new(FIX_VERSION);
     e.put_str(35, "8");

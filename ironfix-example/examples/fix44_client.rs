@@ -7,8 +7,8 @@ use tokio::net::TcpStream;
 use tokio::time::{interval, timeout};
 use tracing::{error, info};
 
-use ironfix::core::{MsgType, Side};
-use ironfix::tagvalue::{Decoder, Encoder};
+use ironfix_core::{MsgType, Side};
+use ironfix_tagvalue::{Decoder, Encoder};
 
 mod common;
 use common::{ExampleConfig, format_timestamp, init_logging, try_decode_message};

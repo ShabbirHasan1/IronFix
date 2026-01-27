@@ -1,7 +1,7 @@
 //! FIX 4.1 Client Example
 use bytes::BytesMut;
-use ironfix::core::{MsgType, Side};
-use ironfix::tagvalue::{Decoder, Encoder};
+use ironfix_core::{MsgType, Side};
+use ironfix_tagvalue::{Decoder, Encoder};
 use std::time::Duration;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpStream;

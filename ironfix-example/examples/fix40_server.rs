@@ -1,8 +1,8 @@
 //! FIX 4.0 Server Example
 
 use bytes::BytesMut;
-use ironfix::core::MsgType;
-use ironfix::tagvalue::{Decoder, Encoder};
+use ironfix_core::MsgType;
+use ironfix_tagvalue::{Decoder, Encoder};
 use std::collections::HashMap;
 use std::sync::Arc;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};

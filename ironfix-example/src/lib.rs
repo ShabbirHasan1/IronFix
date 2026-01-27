@@ -24,7 +24,7 @@
 //! ## Quick Start
 //!
 //! ```rust,ignore
-//! use ironfix::prelude::*;
+//! use ironfix_example::prelude::*;
 //!
 //! // Create an engine with your application handler
 //! let engine = EngineBuilder::new()

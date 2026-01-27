@@ -45,7 +45,7 @@ IronFix provides a complete implementation of the FIX protocol with support for 
 ## Quick Start
 
 ```rust
-use ironfix::prelude::*;
+use ironfix_example::prelude::*;
 
 // Create a session configuration
 let config = SessionConfig::new(

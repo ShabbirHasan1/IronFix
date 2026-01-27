@@ -9,8 +9,8 @@ use tokio::net::{TcpListener, TcpStream};
 use tokio::sync::Mutex;
 use tracing::{error, info, warn};
 
-use ironfix::core::MsgType;
-use ironfix::tagvalue::{Decoder, Encoder};
+use ironfix_core::MsgType;
+use ironfix_tagvalue::{Decoder, Encoder};
 
 mod common;
 use common::{ExampleConfig, format_timestamp, init_logging, try_decode_message};

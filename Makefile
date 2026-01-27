@@ -1,8 +1,27 @@
 # Makefile for common tasks in a Rust project
 # Detect current branch
 CURRENT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
-ZIP_NAME = OrderBook-rs.zip
+ZIP_NAME = IronFix.zip
 
+# Set version across all crates
+# Usage: make version VERSION=0.1.1
+.PHONY: version
+version:
+	@if [ -z "$(VERSION)" ]; then echo "Usage: make version VERSION=x.y.z"; exit 1; fi
+	@echo "Setting version to $(VERSION) across all crates..."
+	@sed -i '' 's/^version = "[^"]*"/version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-core = { path = "ironfix-core", version = "[^"]*"/ironfix-core = { path = "ironfix-core", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-dictionary = { path = "ironfix-dictionary", version = "[^"]*"/ironfix-dictionary = { path = "ironfix-dictionary", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-tagvalue = { path = "ironfix-tagvalue", version = "[^"]*"/ironfix-tagvalue = { path = "ironfix-tagvalue", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-session = { path = "ironfix-session", version = "[^"]*"/ironfix-session = { path = "ironfix-session", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-store = { path = "ironfix-store", version = "[^"]*"/ironfix-store = { path = "ironfix-store", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-transport = { path = "ironfix-transport", version = "[^"]*"/ironfix-transport = { path = "ironfix-transport", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-fast = { path = "ironfix-fast", version = "[^"]*"/ironfix-fast = { path = "ironfix-fast", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-codegen = { path = "ironfix-codegen", version = "[^"]*"/ironfix-codegen = { path = "ironfix-codegen", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-derive = { path = "ironfix-derive", version = "[^"]*"/ironfix-derive = { path = "ironfix-derive", version = "$(VERSION)"/' Cargo.toml
+	@sed -i '' 's/ironfix-engine = { path = "ironfix-engine", version = "[^"]*"/ironfix-engine = { path = "ironfix-engine", version = "$(VERSION)"/' Cargo.toml
+	@echo "Version updated to $(VERSION)"
+	@cargo check --workspace
 
 # Default target
 .PHONY: all

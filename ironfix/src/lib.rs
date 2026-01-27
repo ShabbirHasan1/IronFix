@@ -4,6 +4,8 @@
    Date: 27/1/26
 ******************************************************************************/
 
+#![allow(non_snake_case)]
+
 //! # IronFix
 //!
 //! A high-performance FIX/FAST protocol engine for Rust.

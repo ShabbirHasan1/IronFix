@@ -1,1 +1,3 @@
 # IronFix
+
+License: MIT

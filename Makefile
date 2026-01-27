@@ -109,37 +109,37 @@ publish-all: readme
 	find . -name ".DS_Store" -type f -delete | true
 	cargo login ${CARGO_REGISTRY_TOKEN}
 	@echo "1/11: Publishing ironfix-core..."
-	cargo publish -p ironfix-core --allow-dirty || true
+	cargo publish -p ironfix-core || true
 	@sleep 30
 	@echo "2/11: Publishing ironfix-derive..."
-	cargo publish -p ironfix-derive --allow-dirty || true
+	cargo publish -p ironfix-derive || true
 	@sleep 30
 	@echo "3/11: Publishing ironfix-dictionary..."
-	cargo publish -p ironfix-dictionary --allow-dirty || true
+	cargo publish -p ironfix-dictionary || true
 	@sleep 30
 	@echo "4/11: Publishing ironfix-tagvalue..."
-	cargo publish -p ironfix-tagvalue --allow-dirty || true
+	cargo publish -p ironfix-tagvalue || true
 	@sleep 30
 	@echo "5/11: Publishing ironfix-store..."
-	cargo publish -p ironfix-store --allow-dirty || true
+	cargo publish -p ironfix-store || true
 	@sleep 30
 	@echo "6/11: Publishing ironfix-session..."
-	cargo publish -p ironfix-session --allow-dirty || true
+	cargo publish -p ironfix-session || true
 	@sleep 30
 	@echo "7/11: Publishing ironfix-transport..."
-	cargo publish -p ironfix-transport --allow-dirty || true
+	cargo publish -p ironfix-transport || true
 	@sleep 30
 	@echo "8/11: Publishing ironfix-fast..."
-	cargo publish -p ironfix-fast --allow-dirty || true
+	cargo publish -p ironfix-fast || true
 	@sleep 30
 	@echo "9/11: Publishing ironfix-codegen..."
-	cargo publish -p ironfix-codegen --allow-dirty || true
+	cargo publish -p ironfix-codegen || true
 	@sleep 30
 	@echo "10/11: Publishing ironfix-engine..."
-	cargo publish -p ironfix-engine --allow-dirty || true
+	cargo publish -p ironfix-engine || true
 	@sleep 30
 	@echo "11/11: Publishing ironfix..."
-	cargo publish -p ironfix --allow-dirty || true
+	cargo publish -p ironfix || true
 	@echo "Done! All crates published."
 
 .PHONY: coverage

@@ -1,5 +1,5 @@
 [package]
-name = "ironfix"
+name = "IronFix"
 description = "High-performance FIX/FAST protocol engine for Rust"
 version.workspace = true
 edition.workspace = true

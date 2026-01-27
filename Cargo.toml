@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    "ironfix",
+    "ironfix-example",
     "ironfix-core",
     "ironfix-dictionary",
     "ironfix-tagvalue",

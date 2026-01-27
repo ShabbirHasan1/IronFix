@@ -139,7 +139,7 @@ publish-all: readme
 	cargo publish -p ironfix-engine || true
 	@sleep 30
 	@echo "11/11: Publishing ironfix..."
-	cargo publish -p ironfix || true
+	cargo publish -p ironfix-example || true
 	@echo "Done! All crates published."
 
 .PHONY: coverage

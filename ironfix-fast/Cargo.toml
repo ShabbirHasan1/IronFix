@@ -1,0 +1,20 @@
+[package]
+name = "ironfix-fast"
+description = "FAST protocol encoding and decoding for IronFix"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+bytes.workspace = true
+smallvec.workspace = true
+
+[dev-dependencies]

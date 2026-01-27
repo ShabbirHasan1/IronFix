@@ -1,0 +1,18 @@
+[package]
+name = "ironfix-codegen"
+description = "Build-time code generation for IronFix FIX protocol engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-dictionary.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+
+[dev-dependencies]

@@ -1,0 +1,21 @@
+[package]
+name = "ironfix-tagvalue"
+description = "Zero-copy FIX tag=value encoding and decoding for IronFix"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+thiserror.workspace = true
+bytes.workspace = true
+smallvec.workspace = true
+memchr.workspace = true
+itoa.workspace = true
+
+[dev-dependencies]

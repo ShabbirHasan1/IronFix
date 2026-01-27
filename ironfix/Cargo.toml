@@ -1,0 +1,91 @@
+[package]
+name = "ironfix"
+description = "High-performance FIX/FAST protocol engine for Rust"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+ironfix-dictionary.workspace = true
+ironfix-tagvalue.workspace = true
+ironfix-session.workspace = true
+ironfix-store.workspace = true
+ironfix-transport.workspace = true
+ironfix-fast.workspace = true
+ironfix-engine.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+bytes.workspace = true
+tracing.workspace = true
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[[example]]
+name = "fix40_server"
+path = "../examples/fix40_server.rs"
+
+[[example]]
+name = "fix40_client"
+path = "../examples/fix40_client.rs"
+
+[[example]]
+name = "fix41_server"
+path = "../examples/fix41_server.rs"
+
+[[example]]
+name = "fix41_client"
+path = "../examples/fix41_client.rs"
+
+[[example]]
+name = "fix42_server"
+path = "../examples/fix42_server.rs"
+
+[[example]]
+name = "fix42_client"
+path = "../examples/fix42_client.rs"
+
+[[example]]
+name = "fix43_server"
+path = "../examples/fix43_server.rs"
+
+[[example]]
+name = "fix43_client"
+path = "../examples/fix43_client.rs"
+
+[[example]]
+name = "fix44_server"
+path = "../examples/fix44_server.rs"
+
+[[example]]
+name = "fix44_client"
+path = "../examples/fix44_client.rs"
+
+[[example]]
+name = "fix50_server"
+path = "../examples/fix50_server.rs"
+
+[[example]]
+name = "fix50_client"
+path = "../examples/fix50_client.rs"
+
+[[example]]
+name = "fix50sp1_server"
+path = "../examples/fix50sp1_server.rs"
+
+[[example]]
+name = "fix50sp1_client"
+path = "../examples/fix50sp1_client.rs"
+
+[[example]]
+name = "fix50sp2_server"
+path = "../examples/fix50sp2_server.rs"
+
+[[example]]
+name = "fix50sp2_client"
+path = "../examples/fix50sp2_client.rs"

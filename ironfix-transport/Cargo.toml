@@ -1,0 +1,23 @@
+[package]
+name = "ironfix-transport"
+description = "Network transport layer for IronFix FIX protocol engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+ironfix-tagvalue.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+bytes.workspace = true
+memchr.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]

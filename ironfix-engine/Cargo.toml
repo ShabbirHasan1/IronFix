@@ -1,0 +1,24 @@
+[package]
+name = "ironfix-engine"
+description = "High-level FIX engine facade for IronFix"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+ironfix-session.workspace = true
+ironfix-store.workspace = true
+ironfix-transport.workspace = true
+ironfix-tagvalue.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]

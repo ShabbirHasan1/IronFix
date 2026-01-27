@@ -1,0 +1,18 @@
+[package]
+name = "ironfix-dictionary"
+description = "FIX specification parsing and dictionary management for IronFix"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+
+[dev-dependencies]

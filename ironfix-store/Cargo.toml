@@ -1,0 +1,21 @@
+[package]
+name = "ironfix-store"
+description = "Message persistence and storage for IronFix FIX protocol engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+ironfix-core.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true
+tokio.workspace = true
+parking_lot.workspace = true
+bytes.workspace = true
+
+[dev-dependencies]

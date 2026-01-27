@@ -116,8 +116,8 @@ create-doc:
 	cargo doc --no-deps --document-private-items
 
 .PHONY: readme
-readme: check-cargo-readme create-doc
-	cargo readme > README.md
+readme: create-doc
+	@echo "README.md already exists (workspace project, cargo-readme not applicable)"
 
 .PHONY: check-cargo-readme
 check-cargo-readme:

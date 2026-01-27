@@ -27,9 +27,57 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y make libfontconfig1-dev pkg-config build-essential
-      - name: Check semver
+      - name: Check semver for ironfix-core
         uses: obi1kenobi/cargo-semver-checks-action@v2
         with:
-          package: orderbook-rs
+          package: ironfix-core
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-tagvalue
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-tagvalue
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-dictionary
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-dictionary
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-session
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-session
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-store
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-store
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-transport
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-transport
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-fast
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-fast
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-engine
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-engine
+          feature-group: all-features
+          rust-toolchain: stable
+      - name: Check semver for ironfix-codegen
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          package: ironfix-codegen
           feature-group: all-features
           rust-toolchain: stable

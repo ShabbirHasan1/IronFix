@@ -25,6 +25,8 @@ tokio.workspace = true
 bytes.workspace = true
 tracing.workspace = true
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow.workspace = true
+crossbeam-channel.workspace = true
 
 [[example]]
 name = "fix40_server"
@@ -89,3 +91,19 @@ path = "examples/fix50sp2_server.rs"
 [[example]]
 name = "fix50sp2_client"
 path = "examples/fix50sp2_client.rs"
+
+[[example]]
+name = "fast_server"
+path = "examples/fast_server.rs"
+
+[[example]]
+name = "fast_client"
+path = "examples/fast_client.rs"
+
+[[example]]
+name = "fix44_server_channel"
+path = "examples/fix44_server_channel.rs"
+
+[[example]]
+name = "fast_server_spsc"
+path = "examples/fast_server_spsc.rs"

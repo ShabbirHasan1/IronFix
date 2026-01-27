@@ -15,7 +15,7 @@ members = [
 ]
 
 [workspace.package]
-version = "0.1.4"
+version = "0.1.5"
 edition = "2024"
 authors = ["Joaquin Bejar <jb@taunais.com>"]
 license = "MIT"
@@ -26,16 +26,16 @@ categories = ["finance", "data-structures"]
 
 [workspace.dependencies]
 # Internal crates
-ironfix-core = { path = "ironfix-core", version = "0.1.4" }
-ironfix-dictionary = { path = "ironfix-dictionary", version = "0.1.4" }
-ironfix-tagvalue = { path = "ironfix-tagvalue", version = "0.1.4" }
-ironfix-session = { path = "ironfix-session", version = "0.1.4" }
-ironfix-store = { path = "ironfix-store", version = "0.1.4" }
-ironfix-transport = { path = "ironfix-transport", version = "0.1.4" }
-ironfix-fast = { path = "ironfix-fast", version = "0.1.4" }
-ironfix-codegen = { path = "ironfix-codegen", version = "0.1.4" }
-ironfix-derive = { path = "ironfix-derive", version = "0.1.4" }
-ironfix-engine = { path = "ironfix-engine", version = "0.1.4" }
+ironfix-core = { path = "ironfix-core", version = "0.1.5" }
+ironfix-dictionary = { path = "ironfix-dictionary", version = "0.1.5" }
+ironfix-tagvalue = { path = "ironfix-tagvalue", version = "0.1.5" }
+ironfix-session = { path = "ironfix-session", version = "0.1.5" }
+ironfix-store = { path = "ironfix-store", version = "0.1.5" }
+ironfix-transport = { path = "ironfix-transport", version = "0.1.5" }
+ironfix-fast = { path = "ironfix-fast", version = "0.1.5" }
+ironfix-codegen = { path = "ironfix-codegen", version = "0.1.5" }
+ironfix-derive = { path = "ironfix-derive", version = "0.1.5" }
+ironfix-engine = { path = "ironfix-engine", version = "0.1.5" }
 
 # External dependencies
 thiserror = "2.0"

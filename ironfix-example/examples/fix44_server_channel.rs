@@ -252,10 +252,10 @@ async fn message_processor(mut rx: mpsc::Receiver<IncomingMessage>, cfg: Example
         };
 
         // Send response back through the session's response channel
-        if let Some(resp) = response {
-            if let Err(e) = msg.response_tx.send(resp).await {
-                warn!("Failed to send response: {}", e);
-            }
+        if let Some(resp) = response
+            && let Err(e) = msg.response_tx.send(resp).await
+        {
+            warn!("Failed to send response: {}", e);
         }
     }
 

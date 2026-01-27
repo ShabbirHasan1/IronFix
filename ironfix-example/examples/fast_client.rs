@@ -5,7 +5,7 @@
 
 mod common;
 
-use common::{init_logging, ExampleConfig};
+use common::{ExampleConfig, init_logging};
 use ironfix_fast::FastDecoder;
 use tokio::io::AsyncReadExt;
 use tokio::net::TcpStream;
@@ -113,8 +113,7 @@ fn decode_market_data(data: &[u8], offset: &mut usize) -> Result<MarketDataMessa
         FastDecoder::decode_uint(data, offset).map_err(|_| "Failed to decode template_id")?;
 
     // Sequence number
-    let seq_num =
-        FastDecoder::decode_uint(data, offset).map_err(|_| "Failed to decode seq_num")?;
+    let seq_num = FastDecoder::decode_uint(data, offset).map_err(|_| "Failed to decode seq_num")?;
 
     // Timestamp
     let timestamp =

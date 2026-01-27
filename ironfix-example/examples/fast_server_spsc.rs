@@ -20,12 +20,12 @@
 
 mod common;
 
-use common::{format_timestamp, init_logging, ExampleConfig};
-use crossbeam_channel::{bounded, Receiver, Sender, TrySendError};
+use common::{ExampleConfig, format_timestamp, init_logging};
+use crossbeam_channel::{Receiver, Sender, TrySendError, bounded};
 use ironfix_fast::FastEncoder;
 use std::collections::HashMap;
-use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::sync::Arc;
+use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::thread;
 use std::time::Duration;
 use tokio::io::AsyncWriteExt;
@@ -92,8 +92,13 @@ async fn main() -> anyhow::Result<()> {
     let consumer_stats = Arc::clone(&stats);
     let consumer_running = Arc::clone(&running);
     tokio::spawn(async move {
-        market_data_broadcaster(consumer_rx, consumer_clients, consumer_stats, consumer_running)
-            .await;
+        market_data_broadcaster(
+            consumer_rx,
+            consumer_clients,
+            consumer_stats,
+            consumer_running,
+        )
+        .await;
     });
 
     // Spawn stats reporter
